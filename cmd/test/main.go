@@ -26,14 +26,10 @@ func main() {
 		return true // Allow all interfaces
 	})
 
-	// Create a new RTCPeerConnection configuration with a STUN server
-	// This is needed for ICE gathering to work properly
+	// Create a new RTCPeerConnection configuration with no STUN servers
+	// We're using only local candidates for direct connection
 	serverConfig := webrtc.Configuration{
-		ICEServers: []webrtc.ICEServer{
-			{
-				URLs: []string{"stun:stun.l.google.com:19302"},
-			},
-		},
+		ICEServers: []webrtc.ICEServer{}, // Empty ICE servers list - no STUN/TURN
 	}
 
 	// Create a new API with the custom settings
@@ -59,14 +55,10 @@ func main() {
 		return true // Allow all interfaces
 	})
 
-	// Create a new RTCPeerConnection configuration with a STUN server
-	// This is needed for ICE gathering to work properly
+	// Create a new RTCPeerConnection configuration with no STUN servers
+	// We're using only local candidates for direct connection
 	clientConfig := webrtc.Configuration{
-		ICEServers: []webrtc.ICEServer{
-			{
-				URLs: []string{"stun:stun.l.google.com:19302"},
-			},
-		},
+		ICEServers: []webrtc.ICEServer{}, // Empty ICE servers list - no STUN/TURN
 	}
 
 	// Create a new API with the custom settings

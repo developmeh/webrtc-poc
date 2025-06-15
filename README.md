@@ -120,10 +120,11 @@ make clean
 - The server streams the file line by line with a configurable delay
 - The client receives the lines and either displays them or writes them to a file
 - Both the server and client use a simple logging system for debugging
-- The implementation uses a hybrid approach:
-  - It configures WebRTC to prefer local network interfaces for better privacy
-  - It still uses a STUN server (stun.l.google.com:19302) for ICE gathering to ensure compatibility
-  - This approach provides a balance between privacy and reliability
+- The implementation uses a direct connection approach:
+  - It configures WebRTC to use only local network interfaces
+  - It does not use any STUN/TURN servers, ensuring complete privacy
+  - All connections are established directly between peers on the local network
+  - This approach provides maximum privacy but requires both peers to be on the same network
 
 ## Monitoring WebRTC Connection Status
 
