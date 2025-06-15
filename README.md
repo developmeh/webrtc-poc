@@ -21,8 +21,10 @@ This project demonstrates how to use WebRTC data channels to stream a text file 
 
 ## Requirements
 
-- Go 1.16 or later
+- Go 1.24 or later
 - Bash (for running the demo script)
+- GoReleaser (optional, for creating releases)
+- golangci-lint (optional, for linting)
 
 ## Building
 
@@ -33,6 +35,47 @@ make build
 ```
 
 This will create the server and client executables in the `bin` directory.
+
+## Linting
+
+To run linters on the code:
+
+```bash
+make lint
+```
+
+## Releasing
+
+The project uses [GoReleaser](https://goreleaser.com/) for creating and publishing releases.
+
+### Local Snapshot Release
+
+To create a local snapshot release for testing:
+
+```bash
+make snapshot
+```
+
+This will build binaries for multiple platforms in the `dist` directory without publishing them.
+
+### Creating a Release
+
+To create and publish a release:
+
+1. Tag the commit:
+   ```bash
+   git tag -a v0.1.0 -m "First release"
+   git push origin v0.1.0
+   ```
+
+2. Manually trigger a release:
+   ```bash
+   make release
+   ```
+
+### GitHub Actions
+
+The project includes a GitHub Actions workflow that automatically builds and publishes releases when a new tag is pushed to the repository. The workflow is defined in `.github/workflows/release.yml`.
 
 ## Running the Demo
 
@@ -168,11 +211,13 @@ This program creates both server and client peer connections in the same process
 
 ## Cleaning Up
 
-To clean up build artifacts and logs:
+To clean up build artifacts, release files, and logs:
 
 ```bash
 make clean
 ```
+
+This will remove the `bin` and `dist` directories, as well as log files and process IDs.
 
 ## Implementation Details
 
