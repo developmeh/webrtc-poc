@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/paulscoder/webrtc-poc/internal/client"
-	"github.com/paulscoder/webrtc-poc/internal/logger"
+	"github.com/developmeh/webrtc-poc/internal/client"
+	"github.com/developmeh/webrtc-poc/internal/logger"
 	"github.com/pion/webrtc/v3"
 )
 

@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
-	"github.com/paulscoder/webrtc-poc/internal/logger"
+	"github.com/developmeh/webrtc-poc/internal/logger"
 	"github.com/pion/webrtc/v3"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/paulscoder/webrtc-poc/internal/cmd"
-	"github.com/paulscoder/webrtc-poc/internal/logger"
+	"github.com/developmeh/webrtc-poc/internal/cmd"
+	"github.com/developmeh/webrtc-poc/internal/logger"
 	"github.com/spf13/cobra"
 	"os"
 )

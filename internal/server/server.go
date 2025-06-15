@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/paulscoder/webrtc-poc/internal/logger"
+	"github.com/developmeh/webrtc-poc/internal/logger"
 )
 
 // StreamFile streams a file line by line to the provided writer

@@ -6,7 +6,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/paulscoder/webrtc-poc/internal/logger"
+	"github.com/developmeh/webrtc-poc/internal/logger"
 	"github.com/pion/webrtc/v3"
 )
 

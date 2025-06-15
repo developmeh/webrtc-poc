@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/paulscoder/webrtc-poc/internal/logger"
+	"github.com/developmeh/webrtc-poc/internal/logger"
 )
 
 // LineReceiver is an interface for receiving lines of text
