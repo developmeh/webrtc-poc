@@ -2,6 +2,8 @@
 
 This is a proof of concept for using WebRTC to stream a file line by line. The implementation is kept as succinct as possible while still being functional.
 
+**[Detailed explanation of WebRTC connection process without STUN servers](WEBRTC_CONNECTION_DETAILS.md)**
+
 ## Overview
 
 This project demonstrates how to use WebRTC data channels to stream a text file line by line from a server to a client. The server reads the file and sends each line to the client with a configurable delay. The client receives the lines and either displays them on the console or writes them to a file.
