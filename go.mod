@@ -2,7 +2,11 @@ module github.com/paulscoder/webrtc-poc
 
 go 1.24.2
 
-require github.com/pion/webrtc/v3 v3.3.5
+require (
+	github.com/pion/webrtc/v3 v3.3.5
+	github.com/spf13/cobra v1.8.0
+	github.com/spf13/viper v1.18.2
+)
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect

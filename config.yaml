@@ -1,0 +1,27 @@
+# WebRTC File Streaming Configuration
+
+# Server configuration
+server:
+  # HTTP service address
+  addr: ":8080"
+  # File to stream
+  file: "sample.txt"
+  # Delay between lines in milliseconds
+  delay: 1000
+  # STUN server address (leave empty for direct connection)
+  stun: ""
+
+# Client configuration
+client:
+  # WebRTC server URL
+  server: "http://localhost:8080/offer"
+  # Output file (leave empty for stdout)
+  output: ""
+  # STUN server address (leave empty for direct connection)
+  stun: ""
+
+# Example STUN server configuration:
+# server:
+#   stun: "stun:stun.l.google.com:19302"
+# client:
+#   stun: "stun:stun.l.google.com:19302"

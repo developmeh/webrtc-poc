@@ -46,7 +46,7 @@ fi
 
 # Start the server in the background
 echo "Starting server..."
-bin/server --addr ":8081" --file sample.txt --delay 500 > server.log 2>&1 &
+bin/webrtc-poc server --addr ":8081" --file sample.txt --delay 500 > server.log 2>&1 &
 SERVER_PID=$!
 echo "Server started with PID: $SERVER_PID"
 echo "$SERVER_PID" > "$PID_FILE"
@@ -56,7 +56,7 @@ sleep 2
 
 # Start the client in the background
 echo "Starting client..."
-bin/client --server "http://localhost:8081/offer" > client.log 2>&1 &
+bin/webrtc-poc client --server "http://localhost:8081/offer" > client.log 2>&1 &
 CLIENT_PID=$!
 echo "Client started with PID: $CLIENT_PID"
 echo "$CLIENT_PID" >> "$PID_FILE"
